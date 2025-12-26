@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: ecom_silver_prod
+    database: titanium-diode-464605-j3
+    schema: ecom_silver_prod
+    tables:
+      - name: orders_header_ext
+      - name: order_items_ext

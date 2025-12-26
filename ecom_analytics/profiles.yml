@@ -1,0 +1,11 @@
+ecom_dbt:
+  target: prod
+  outputs:
+    prod:
+      type: bigquery
+      method: service-account
+      project: titanium-diode-464605-j3
+      dataset: ecom_gold_prod
+      location: europe-west1
+      threads: 4
+      keyfile: /opt/ecom/secrets/gcp/bronze-writer-dev.json

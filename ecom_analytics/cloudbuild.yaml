@@ -1,0 +1,11 @@
+steps:
+  - name: "ghcr.io/dbt-labs/dbt-bigquery:1.7.9"
+    entrypoint: "bash"
+    args:
+      - "-lc"
+      - |
+        cd dbt
+        dbt deps
+        dbt build --target prod
+options:
+  logging: CLOUD_LOGGING_ONLY

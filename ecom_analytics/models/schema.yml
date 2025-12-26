@@ -1,0 +1,42 @@
+version: 2
+
+models:
+  - name: stg_orders_header
+    columns:
+      - name: order_id
+        tests:
+          - not_null
+          - unique
+
+  - name: stg_order_items
+    columns:
+      - name: order_id
+        tests:
+          - not_null
+
+  - name: fct_orders
+    columns:
+      - name: order_id
+        tests:
+          - not_null
+          - unique
+ - name: orders_daily
+    columns:
+      - name: dt
+        tests: [not_null, unique]
+
+  - name: revenue_by_country_daily
+    columns:
+      - name: dt
+        tests: [not_null]
+      - name: country
+        tests: [not_null]
+
+  - name: top_skus_daily
+    columns:
+      - name: dt
+        tests: [not_null]
+      - name: sku
+        tests: [not_null]
+      - name: sku_rank
+        tests: [not_null]

@@ -1,0 +1,39 @@
+# Python virtual environments
+.venv/
+venv/
+ENV/
+env/
+*.venv
+
+# Logs
+logs/
+*.log
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# dbt generated files
+target/
+dbt_packages/
+profiles.yml  # if it contains service account keys or credentials
+
+# Airflow local files
+airflow.cfg
+airflow.db
+*.sqlite
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE / Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+.venv/
+logs/
